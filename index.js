@@ -286,8 +286,10 @@ function getModelYears(arr) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(arr, id) {
+  const make = arr[id - 1];
+  const model = arr[id - 1];
+  return `This is a ${make.car_make} ${model.car_model}`;
 }
 
 /**
@@ -304,8 +306,14 @@ function getCarInfoById(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(arr, year) {
+  const oldCars = [];
+  for (let i = 0; i > arr.length; i++) {
+    if (year <= [arr[3]]) {
+      oldCars.push(arr.car_year);
+    }
+  }
+  return oldCars;
 }
 
 /**
